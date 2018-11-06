@@ -59,7 +59,24 @@ public class GUI extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Ich rechne");
+
+				int op1 = Integer.parseInt(fieldOperand1.getText());
+				int op2 = Integer.parseInt(fieldOperand2.getText());
+				
+				int ergebnis;
+				
+				if (operator.equals("+")) {
+					ergebnis = op1 + op2;
+					System.out.println(ergebnis);
+				}else if (operator.equals("-")) {
+					ergebnis = op1 - op2;
+				}else if (operator.equals("*")) {
+					ergebnis = op1 * op2;
+				}else if (operator.equals("/")) {
+					ergebnis = op1 / op2;
+				}else
+					System.out.println("Bitte +,*,/,- eigeben!");
+				
 
 			}
 		});
